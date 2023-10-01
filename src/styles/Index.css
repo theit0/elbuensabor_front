@@ -1,0 +1,18 @@
+main {
+    min-height: 100vh;
+    padding: 1rem 4rem;
+}
+
+input {
+    width: 250px;
+    height: 30px;
+    background-color: #F7F7F7;
+    border-radius: 20px;
+    border: none;
+    padding: 0 1rem;
+}
+
+
+::placeholder{
+    color: #929191;
+}

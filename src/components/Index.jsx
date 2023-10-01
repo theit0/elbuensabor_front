@@ -1,8 +1,10 @@
-import React from 'react'
+import '../styles/Index.css'
 
 const Index = () => {
   return (
-    <div>Index</div>
+      <main>
+          <input type='search' placeholder='Buscar comida'/>
+      </main>
   )
 }
 

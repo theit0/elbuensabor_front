@@ -4,6 +4,8 @@ header{
     align-items: center;
     padding: 2rem 4rem;
 }
+
+
 header nav {
     display: flex;
     gap: 2rem;
@@ -15,12 +17,73 @@ header nav a {
 }
 
 .navlink{
+    width: 100%;
     display: flex;
     align-items: center;
     gap: .2rem;
+    transition: .2s ease;
 }
+
 
 .navlink img{
     width: 15px;
     height: 15px;
+}
+
+.navlinks {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+nav{
+    position: relative;
+}
+
+.navlinks-dropped {
+    background-color: white;
+    padding: 2rem;
+    border: 1px solid #E6E6E6;
+    border-radius: 20px;
+    position: absolute;
+    top: 60px;
+    left: -80px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+
+.dropdown-button{
+    padding: .5rem .3rem .3rem .3rem;
+    border-radius: 20px;
+    background-color: white;
+    border: none;
+    display: none;
+    transition: .2s ease;
+}
+.dropdown-button:hover{
+    scale: 1.2;
+    cursor: pointer;
+    background-color:#F7F7F7;
+}
+.dropdown-button:active{
+    scale: 1;
+}
+
+
+
+@media (max-width:700px) {
+    .dropdown-button{
+        display: block;
+    }
+
+    .navlinks {
+        display: none;
+    }
+
+    header{
+        padding: 2rem 2rem;
+    }
+    
 }

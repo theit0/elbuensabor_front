@@ -6,7 +6,7 @@ main {
     gap: 2rem;
 }
 
-input {
+.search-container input {
     background-color: #F7F7F7;
     width: 250px;
     height: 30px;
@@ -34,11 +34,15 @@ input {
     transition: .1s;
 }
 .search-container button:hover{
-    scale: 1.2;
+    scale: 1.5;
 }
 
-input:focus {
-    outline: none; 
+.search-container input:focus{
+    outline: none
+}
+
+.search-container input:focus::placeholder {
+    color: transparent;
 }
 
 ::placeholder{
@@ -55,6 +59,11 @@ input:focus {
     align-items: center;
     justify-content: space-between;
     overflow: hidden;
+    transition: .1s ease;
+}
+
+.banner:hover {
+    scale: 1.0075;
 }
 
 .banner-text{
@@ -68,14 +77,26 @@ input:focus {
     background-color: white;
     color: black;
     font-weight: 600;
-    padding: .5rem 1rem .5rem 1rem;
+    padding: .3rem 1rem .3rem .75rem;
     border-radius: 20px;
     display: flex;
     align-items: center;
     width: fit-content;
     text-decoration: none;
+    transition: .1s ease;
 }
 
 .banner-text a:hover{
+    scale: 1.1;
     background-color: #F7F7F7;
+}
+.banner-text a:active{
+    scale: 1;
+}
+
+
+@media (max-width:700px) {
+    main {
+        padding: 1rem 2rem;
+    }
 }

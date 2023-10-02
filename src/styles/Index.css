@@ -1,18 +1,81 @@
 main {
     min-height: 100vh;
     padding: 1rem 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
 
 input {
+    background-color: #F7F7F7;
     width: 250px;
     height: 30px;
-    background-color: #F7F7F7;
     border-radius: 20px;
     border: none;
-    padding: 0 1rem;
 }
 
 
+.search-container{
+    border-radius: 20px;
+    width: 250px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+    background-color: #F7F7F7;
+}
+
+.search-container button{
+    cursor: pointer;
+    padding-top: 0.2rem;
+    border: none;
+    background-color: #F7F7F7;
+    transition: .1s;
+}
+.search-container button:hover{
+    scale: 1.2;
+}
+
+input:focus {
+    outline: none; 
+}
+
 ::placeholder{
     color: #929191;
+}
+
+.banner {
+    width: 100%;
+    background-color: #E5030B;
+    border-radius: 20px;
+    color: white;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.banner-text{
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.banner-text a{
+    background-color: white;
+    color: black;
+    font-weight: 600;
+    padding: .5rem 1rem .5rem 1rem;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    text-decoration: none;
+}
+
+.banner-text a:hover{
+    background-color: #F7F7F7;
 }

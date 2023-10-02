@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import MainLayout from "../layouts/MainLayout";
 import Index from '../pages/Index'
 import Login from '../pages/Login'
+import Carrito from '../pages/Carrito'
 
 const Router = createBrowserRouter([
     {
@@ -18,7 +19,7 @@ const Router = createBrowserRouter([
             },
             {
                 path:'/carrito',
-                element: <Login/>
+                element: <Carrito/>
             }
         ]
     },

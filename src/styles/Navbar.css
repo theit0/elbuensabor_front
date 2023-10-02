@@ -6,22 +6,23 @@ header{
 }
 
 
-header nav {
-    display: flex;
-    gap: 2rem;
-}
-
 header nav a {
     text-decoration: none;
     color: black;
 }
 
 .navlink{
-    width: 100%;
+    width: fit-content;
     display: flex;
     align-items: center;
     gap: .2rem;
     transition: .2s ease;
+    padding: .5rem 1rem .5rem 1rem;
+}
+
+.navlink:hover{
+    border-radius: 20px;
+    background-color: #F7F7F7;
 }
 
 
@@ -33,7 +34,6 @@ header nav a {
 .navlinks {
     display: flex;
     flex-direction: row;
-    gap: 2rem;
 }
 
 nav{
@@ -47,10 +47,11 @@ nav{
     border-radius: 20px;
     position: absolute;
     top: 60px;
-    left: -80px;
+    left: -120px;
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    z-index: 1;
 }
 
 

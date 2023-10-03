@@ -3,7 +3,7 @@ import React from 'react'
 const InputBuscar = () => {
   return (
     <div className='search-container'>
-        <input type='search' placeholder='Buscar comida'/>
+        <input placeholder='Buscar comida'/>
         <button>
             <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="15" height="15" viewBox="0 0 24 24" stroke-width="2" stroke="#929191" fill="none" stroke-linecap="round" stroke-linejoin="round">
             <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>

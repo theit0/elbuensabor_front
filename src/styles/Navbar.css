@@ -24,6 +24,10 @@ header nav a {
     background-color: #EAECEC;
 }
 
+.navlink:active{
+    background: #cbcbcb;
+}
+
 
 .navlink img{
     width: 15px;

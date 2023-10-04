@@ -6,7 +6,6 @@
 }
 
 
-
 .filtro-lista{
     position: relative;
     cursor: pointer;
@@ -23,6 +22,11 @@
 .filtro-lista:hover{
     background: #EAECEC;
 }
+
+.filtro-lista:active{
+    background: #cbcbcb;
+}
+
 
 .listaDropped{
     position: absolute;

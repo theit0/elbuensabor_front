@@ -45,11 +45,16 @@
     border-radius: 20px;
     background-color: white;
     justify-content: center;
+    transition: .1s ease;
 }
 
 .articulo-botones button:hover{
     background-color: black;
     color: white;
+}
+
+.articulo-botones button:active{
+    scale: 0.9;
 }
 
 .articulo-botones a{

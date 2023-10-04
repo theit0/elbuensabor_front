@@ -1,0 +1,53 @@
+.barra-filtros{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    
+}
+
+
+
+.filtro-lista{
+    position: relative;
+    cursor: pointer;
+    gap: .2rem;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    height: 30px;
+    padding: 0 .75rem;
+    border-radius: 100px;
+    border: 1px solid #EAECEC;
+}
+
+.filtro-lista:hover{
+    background: #EAECEC;
+}
+
+.listaDropped{
+    position: absolute;
+    gap: 1rem;
+    top: 40px;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1rem;
+    border-radius: 20px;
+    border: 1px solid #EAECEC;
+    background-color: white;
+}
+
+.listaDropped span{
+    padding: .5rem 1rem;
+    font-size: 13.3px;
+    border-radius: 20px;
+}
+.listaDropped span:hover{
+    cursor: pointer;
+    background-color: #F7F7F7;
+}
+
+.lista-container {
+    position: relative;
+}

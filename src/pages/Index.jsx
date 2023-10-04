@@ -5,15 +5,29 @@ import InputBuscar from '../components/InputBuscar'
 import ListaFiltro from '../components/ListaFiltro'
 
 import Articulo from '../components/Articulo'
+import { useDispatch, useSelector } from 'react-redux'
+import { get_articulos } from '../store/actions/ArticuloActions'
+import { useEffect } from 'react'
+
+
 
 const Index = () => {
 
-  const API_URL = 'https://elbuensabor-z8d4.onrender.com/api/v1/rubros';
-  
-  return (
-      <main>
-          <Banner/>
-          <section className='barra-filtros'>
+    const articulos = useSelector(store=>store.articuloReducers.articulos);
+    console.log(articulos)
+
+
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+        dispatch(get_articulos())
+    },[]);
+
+
+    return (
+        <main>
+            <Banner/>
+            <section className='barra-filtros'>
                 <ListaFiltro nombreFiltro="Rubro">
                     <span>Rubro1</span>
                     <span>Rubro2</span>
@@ -25,14 +39,20 @@ const Index = () => {
                     <span>ProductoConPromoción</span>
                 </ListaFiltro>
                 <InputBuscar/>
-          </section>
-          
-          <section className='articulos'>
-                <Articulo/>
-          </section>
+            </section>
+            
+            <section className='articulos'>
+                {
+                    articulos && articulos.map((articulo)=>{
+                        return (
+                            <Articulo nombre={articulo.denominacion} precio={articulo.precioVenta} imagen={articulo.urlImagen}/>
+                        )
+                    })
+                }
+            </section>
 
-      </main>
-  )
+        </main>
+    )
 }
 
 export default Index

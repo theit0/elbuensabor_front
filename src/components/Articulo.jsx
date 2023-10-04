@@ -1,16 +1,15 @@
 import '../styles/Articulo.css'
 import { Link } from 'react-router-dom'
-import hamburguesa from '../assets/hamburguesa.png'
 
-const Articulo = () => {
+const Articulo = ({nombre,precio,imagen}) => {
     return (
         <article className='articulo'>
             <div className='articulo-imagen-container'>
-                <img src={hamburguesa}/>
+                <img src={imagen}/>
             </div>
             <div className='articulo-nombre'>
-                <h4>HAMBURGUESA</h4>
-                <span>$1500</span>
+                <h4>{nombre.toUpperCase()}</h4>
+                <span>${precio}</span>
             </div>
             <div className='articulo-botones'>
                 <button>

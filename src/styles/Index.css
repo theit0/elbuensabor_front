@@ -1,5 +1,4 @@
 main {
-    min-height: 100vh;
     padding: 1rem 4rem;
     display: flex;
     flex-direction: column;
@@ -102,3 +101,8 @@ main {
 }
 
 
+.articulos {
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 2rem;
+}

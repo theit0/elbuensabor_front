@@ -1,6 +1,5 @@
 .articulo {
     width: 300px;
-    height: 300px;
     display: grid;
     grid-template-columns: repeat(2,1fr);
     gap: .75rem;
@@ -14,6 +13,7 @@
     display: grid;
     place-content: center;
     border-radius: 20px;
+    
 }
 
 .articulo-imagen-container img{

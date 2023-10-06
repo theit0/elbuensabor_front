@@ -32,9 +32,7 @@ main {
     background-color: #F7F7F7;
     transition: .1s;
 }
-.search-container button:hover{
-    scale: 1.5;
-}
+
 
 .search-container input:focus{
     outline: none
@@ -102,7 +100,51 @@ main {
 
 
 .articulos {
-    display: grid;
-    grid-template-columns: repeat(5,1fr);
-    gap: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
 }
+
+.seccion-articulos-rubro{
+    display: grid;
+    gap: 1rem;
+    padding-bottom: 3rem;
+}
+
+.barra-filtros{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+
+.boton-filtrar{
+    cursor: pointer;
+    padding: 0 1rem;
+    height: 32px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: .25rem;
+    border-radius: 20px;
+    background-color: black;
+    border: 1px solid black;
+    justify-content: center;
+    transition: .1s ease;
+    color: white;
+    font-weight: 500;
+}
+
+.boton-filtrar:hover{
+    scale: 1.05;
+    color: white;
+}
+
+.boton-filtrar:active{
+    scale: 0.9;
+}
+
+
+

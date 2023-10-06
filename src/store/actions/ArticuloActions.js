@@ -5,8 +5,7 @@ import axios from "axios"
 export const get_articulos = createAsyncThunk('get_articulos',async ()=>{
     
     try {
-        const response = await axios.get('https://elbuensaborservice.onrender.com/api/v1/ArticuloManufacturado')
-        console.log(response.data)
+        const response = await axios.get('http://localhost:8080/api/v1/articulosManufacturados')
         return {
             articulos: response.data
         }
@@ -15,4 +14,30 @@ export const get_articulos = createAsyncThunk('get_articulos',async ()=>{
     } 
     
 })
+
+export const get_articulos_denominacion = createAsyncThunk('get_articulos_denominacion',async (obj)=>{
+    try {
+        const response = await axios.get(`http://localhost:8080/api/v1/articulosManufacturados/buscarArticuloManufacturadoPorDenominacion?denominacion=${obj.denominacion}`)
+        
+        return {
+            articulos: response.data
+        }
+    } catch (error) {
+        console.log(error)
+    }
+})
+
+export const get_articulos_rubro = createAsyncThunk('get_articulos_rubro',async (denominacionRubro)=>{
+    try {
+        const response = await axios.get(`http://localhost:8080/api/v1/articulosManufacturados/filtroPorRubro?denominacionRubro=${denominacionRubro}`)
+        console.log(response)
+        return {
+            articulos: response.data
+        }
+    } catch (error) {
+        console.log(error)
+    }
+})
+
+
 

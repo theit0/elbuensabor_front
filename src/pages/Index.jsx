@@ -2,19 +2,16 @@ import '../styles/Index.css'
 
 import Banner from '../components/Banner'
 
-
-import Articulo from '../components/Articulo'
 import { useDispatch, useSelector } from 'react-redux'
-import { get_articulos } from '../store/actions/ArticuloActions'
+import { get_articulos} from '../store/actions/ArticuloActions'
 import { useEffect } from 'react'
 import BarraFiltros from '../components/BarraFiltros'
+import { get_rubros } from '../store/actions/RubroActions'
+import SeccionArticulos from '../components/SeccionArticulos'
 
 
 
 const Index = () => {
-
-    const articulos = useSelector(store=>store.articuloReducers.articulos);
-    console.log(articulos)
 
 
     const dispatch = useDispatch();
@@ -24,19 +21,15 @@ const Index = () => {
     },[]);
 
 
+    
+
     return (
         <main>
             <Banner/>
+            
             <BarraFiltros/>
-            <section className='articulos'>
-                {
-                    articulos && articulos.map((articulo)=>{
-                        return (
-                            <Articulo nombre={articulo.denominacion} precio={articulo.precioVenta} imagen={articulo.urlImagen}/>
-                        )
-                    })
-                }
-            </section>
+
+            <SeccionArticulos/>    
         </main>
     )
 }

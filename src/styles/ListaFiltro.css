@@ -1,9 +1,3 @@
-.barra-filtros{
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    
-}
 
 
 .filtro-lista{
@@ -42,14 +36,17 @@
     background-color: white;
 }
 
-.listaDropped span{
+.listaDropped button{
+    width:150px;
     padding: .5rem 1rem;
     font-size: 13.3px;
     border-radius: 20px;
+    border: 1px solid #F7F7F7;
+    background-color:#F7F7F7 ;
 }
-.listaDropped span:hover{
+.listaDropped button:hover{
     cursor: pointer;
-    background-color: #F7F7F7;
+    background-color: #e0e0e0;
 }
 
 .lista-container {

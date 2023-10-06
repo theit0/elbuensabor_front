@@ -40,4 +40,30 @@ export const get_articulos_rubro = createAsyncThunk('get_articulos_rubro',async 
 })
 
 
+export const get_articulos_precio_desc = createAsyncThunk('get_articulos_precio_desc',async ()=>{
+    try {
+        const response = await axios.get(`http://localhost:8080/api/v1/articulosManufacturados/filtradoPorPrecioDesc`)
+        console.log(response)
+        return {
+            articulos: response.data
+        }
+    } catch (error) {
+        console.log(error)
+    }
+})
+
+export const get_articulos_precio_asc = createAsyncThunk('get_articulos_precio_asc',async ()=>{
+    try {
+        const response = await axios.get(`http://localhost:8080/api/v1/articulosManufacturados/filtradoPorPrecioAsc`)
+        console.log(response)
+        return {
+            articulos: response.data
+        }
+    } catch (error) {
+        console.log(error)
+    }
+})
+
+
+
 

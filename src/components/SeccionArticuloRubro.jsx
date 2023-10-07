@@ -15,7 +15,7 @@ const SeccionArticuloRubro = ({rubroDenominacion}) => {
             {
                 articulos_rubro.length!==0 &&
                 <div className='seccion-articulos-rubro'>
-                    <h2>{rubroDenominacion}</h2>
+                    <h2>{rubroDenominacion.toUpperCase()}</h2>
                     <div className='articulos'>
                         
                         {

@@ -1,3 +1,4 @@
+
 .articulo {
     width: 300px;
     display: grid;
@@ -12,7 +13,6 @@
     background-color: #F7F7F7;
     display: grid;
     place-content: center;
-    border-radius: 20px;
     
 }
 
@@ -42,7 +42,6 @@
     align-items: center;
     gap: .25rem;
     border: 1px solid black;
-    border-radius: 20px;
     background-color: white;
     justify-content: center;
     transition: .1s ease;
@@ -66,14 +65,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 20px;
     background-color: black;
     gap: .25rem;
-    transition: .1s ease-in-out;
+    transition: .1s ease;
 }
 
 .articulo-botones a:hover{
-    scale: 1.1;
+    scale: 1.05;
 }
 
 .articulo-botones a:active{

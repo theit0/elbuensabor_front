@@ -2,12 +2,10 @@
     color: #929191;
 }
 
-
-
 .art-manuf-detalle-section{
     display: flex;
     justify-content: center;
-    min-height: calc(100vh - 130px);
+    min-height: 100vh;
     align-items: center;
 }
 
@@ -24,17 +22,37 @@
     gap: 1rem;
 }
 
+@media (max-width:1360px) {
+    .art-manuf-detalle-container{
+        padding: 2rem 1rem;
+    }
+    .articulo-detalle-container{
+        flex-direction: column;
+    }
+
+    .detalle-articulo-imagen-container {
+        max-height: 300px;
+        max-width: 300px;
+    }
+
+    .detalle-articulo-imagen-container img {
+        
+        width: 300px;
+    }
+}
+
+
 .detalle-articulo-imagen-container {
     background-color: #F7F7F7;
     max-width: 600px ;
-    max-height: 600px;
+    height: 600px;
     padding: 2rem;
     display: grid;
     place-content: center;
 }
 
 .detalle-articulo-imagen-container img{
-    width: 100%;
+    max-width: 100%;
 }
 
 

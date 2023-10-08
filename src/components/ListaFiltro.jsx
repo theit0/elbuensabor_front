@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import '../styles/ListaFiltro.css'
 
 
@@ -6,12 +6,28 @@ const ListaFiltro = ({children, nombreFiltro}) => {
 
     const [isListaDropped,setIsListaDropped] = useState(false);
 
+    const listaRef = useRef(null);
+
+
     const handleClickLista = () =>{
         setIsListaDropped(!isListaDropped)
     }
 
+    const handleDocumentClick = (e) => {
+        if (listaRef.current && !listaRef.current.contains(e.target)) {
+          setIsListaDropped(false);
+        }
+    };
+
+    useEffect(() => {
+    document.addEventListener('click', handleDocumentClick);
+    return () => {
+        document.removeEventListener('click', handleDocumentClick);
+    };
+    }, []);
+
     return (
-        <div className='lista-container'>
+        <div className='lista-container' ref={listaRef}>
             <button className='filtro-lista' onClick={()=>handleClickLista()}>
                 {nombreFiltro}
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-caret-down-filled" width="15" height="15" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">

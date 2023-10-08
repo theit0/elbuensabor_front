@@ -1,5 +1,5 @@
 import '../styles/Navbar.css'
-import logo from '../assets/logobs.svg'
+import logo from '../assets/logobsnegro.svg'
 import { Link } from 'react-router-dom'
 import Navlink from './Navlink'
 import inicio from '../assets/home.svg'

@@ -4,6 +4,7 @@ import Index from '../pages/Index'
 import Login from '../pages/Login'
 import Carrito from '../pages/Carrito'
 import ArticuloManufacturadoDetalle from '../pages/ArticuloManufacturadoDetalle'
+import SinFooter from "../layouts/SinFooter";
 
 const Router = createBrowserRouter([
     {
@@ -22,14 +23,18 @@ const Router = createBrowserRouter([
                 path:'/carrito',
                 element: <Carrito/>
             },
+            
+        ]
+    },
+    {
+        path: '',
+        element: <SinFooter/>,
+        children: [
             {
                 path:'/articulosManufacturados/:id',
                 element: <ArticuloManufacturadoDetalle/>
             }
-        ]
-    },
-    {
-       
+        ]  
     }
 ])
 

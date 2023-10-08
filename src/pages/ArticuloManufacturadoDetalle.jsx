@@ -11,6 +11,7 @@ const ArticuloManufacturadoDetalle = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
+      window.scrollTo(130, 130);
       dispatch(get_articulo(id));
   }, []);
 
@@ -19,6 +20,9 @@ const ArticuloManufacturadoDetalle = () => {
   if(unidades<0) {
     setUnidades(0);
   }
+
+
+ 
 
   return (
       <section className='art-manuf-detalle-section'>

@@ -15,6 +15,21 @@ export const get_articulos = createAsyncThunk('get_articulos',async ()=>{
     
 })
 
+export const get_articulo = createAsyncThunk('get_articulo',async (id)=>{
+    
+    try {
+        const response = await axios.get(`http://localhost:8080/api/v1/articulosManufacturados/${id}`)
+        console.log(response.data)
+        return {
+            articulo: response.data
+        }
+    } catch (error) {
+        console.log(error)
+    } 
+    
+})
+
+
 export const get_articulos_denominacion = createAsyncThunk('get_articulos_denominacion',async (obj)=>{
     try {
         const response = await axios.get(`http://localhost:8080/api/v1/articulosManufacturados/buscarArticuloManufacturadoPorDenominacion?denominacion=${obj.denominacion}`)

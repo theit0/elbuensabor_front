@@ -2,7 +2,7 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2rem 4rem;
+    padding: 1rem 4rem;
 }
 
 
@@ -20,7 +20,6 @@ header nav a {
 }
 
 .navlink:hover{
-    border-radius: 20px;
     background-color: #EAECEC;
 }
 
@@ -47,7 +46,6 @@ nav{
     background-color: white;
     padding: 2rem;
     border: 1px solid #E6E6E6;
-    border-radius: 20px;
     position: absolute;
     top: 60px;
     left: -120px;
@@ -60,7 +58,6 @@ nav{
 
 .dropdown-button{
     padding: .5rem .3rem .3rem .3rem;
-    border-radius: 20px;
     background-color: white;
     border: none;
     display: none;

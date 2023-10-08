@@ -1,8 +1,9 @@
 import { createReducer } from "@reduxjs/toolkit"
-import {get_articulos, get_articulos_denominacion, get_articulos_precio_asc, get_articulos_precio_desc, get_articulos_rubro} from '../actions/ArticuloActions.js'
+import {get_articulo, get_articulos, get_articulos_denominacion, get_articulos_precio_asc, get_articulos_precio_desc, get_articulos_rubro} from '../actions/ArticuloActions.js'
 
 const estadoInicial = {
-    articulos: []
+    articulos: [],
+    articulo: {}
 }
 
 const ArticuloReducers = createReducer(estadoInicial,
@@ -11,6 +12,12 @@ const ArticuloReducers = createReducer(estadoInicial,
                         return {
                             ...state,
                             articulos: action.payload.articulos
+                        }
+                    })
+                    .addCase(get_articulo.fulfilled, (state,action) => {
+                        return {
+                            ...state,
+                            articulo: action.payload.articulo
                         }
                     })
                     .addCase(get_articulos_denominacion.fulfilled, (state,action) => {

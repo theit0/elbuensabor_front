@@ -46,6 +46,12 @@
     background-color: #F7F7F7;
 }
 
+.listaDropped button:active{
+    background-color: #cbcbcb;
+}
+
+
+
 .lista-container {
     position: relative;
 }

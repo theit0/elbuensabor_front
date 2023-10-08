@@ -15,7 +15,7 @@ const Navbar = () => {
     <header>
          <article>
             <Link to='/'>
-              <img src={logo}/>
+              <img src={logo} width={100}/>
             </Link>
          </article>  
          <nav>

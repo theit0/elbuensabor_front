@@ -21,7 +21,7 @@ const SeccionArticuloRubro = ({rubroDenominacion}) => {
                         {
                             articulos_rubro && articulos_rubro.map((articulo)=>{
                                 return (
-                                    <Articulo nombre={articulo.denominacion} precio={articulo.precioVenta} imagen={articulo.urlImagen}/>
+                                    <Articulo id={articulo.id} nombre={articulo.denominacion} precio={articulo.precioVenta} imagen={articulo.urlImagen}/>
                                 )
                             })
                         }

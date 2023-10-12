@@ -3,6 +3,10 @@ import Articulo from '../components/Articulo'
 
 
 const SeccionArticuloRubro = ({rubroDenominacion}) => {
+
+  
+
+
     const articulos = useSelector(store=>store.articuloReducers.articulos)
                     
     const articulos_rubro = articulos.filter(articulo => {
@@ -17,11 +21,10 @@ const SeccionArticuloRubro = ({rubroDenominacion}) => {
                 <div className='seccion-articulos-rubro'>
                     <h2>{rubroDenominacion.toUpperCase()}</h2>
                     <div className='articulos'>
-                        
                         {
                             articulos_rubro && articulos_rubro.map((articulo)=>{
                                 return (
-                                    <Articulo id={articulo.id} nombre={articulo.denominacion} precio={articulo.precioVenta} imagen={articulo.urlImagen}/>
+                                    <Articulo articulo={articulo}/>
                                 )
                             })
                         }

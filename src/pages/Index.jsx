@@ -6,9 +6,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { get_articulos} from '../store/actions/ArticuloActions'
 import { useEffect } from 'react'
 import BarraFiltros from '../components/BarraFiltros'
-import { get_rubros } from '../store/actions/RubroActions'
 import SeccionArticulos from '../components/SeccionArticulos'
-
 
 
 const Index = () => {
@@ -21,15 +19,13 @@ const Index = () => {
     },[]);
 
 
-    
-
     return (
         <main>
             <Banner/>
             
             <BarraFiltros/>
 
-            <SeccionArticulos/>    
+            <SeccionArticulos/>
         </main>
     )
 }

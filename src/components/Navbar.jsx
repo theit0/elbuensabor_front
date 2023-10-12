@@ -6,8 +6,11 @@ import inicio from '../assets/home.svg'
 import login from '../assets/login.svg'
 import carrito from '../assets/shopping-cart.svg'
 import { useState } from 'react'
+import { useSelector } from 'react-redux'
 
 const Navbar = () => {
+
+  const cliente = useSelector(store=>store.clienteReducers.cliente);
 
   const [isMenuToggled,setIsMenuToggled] = useState(false);
 
@@ -44,6 +47,8 @@ const Navbar = () => {
                   </svg>
                 }
             </button>
+
+            {/* <span>{cliente.nombre}</span> */}
          </nav>   
     </header>
   )

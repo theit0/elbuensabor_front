@@ -1,0 +1,25 @@
+.login-container{
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+}
+
+.login-container a{
+    background-color: white;
+    color: black;
+    font-weight: 600;
+    padding: .3rem 1rem .3rem .75rem;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    text-decoration: none;
+    transition: .1s ease;
+}
+
+.login-container a:hover{
+    scale: 1.1;
+    background-color: #F7F7F7;
+}
+.login-container a:active{
+    scale: 1;
+}

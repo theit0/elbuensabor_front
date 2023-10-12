@@ -22,8 +22,6 @@ const ArticuloManufacturadoDetalle = () => {
   }
 
 
- 
-
   return (
       <section className='art-manuf-detalle-section'>
           {

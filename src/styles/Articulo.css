@@ -33,9 +33,15 @@
     gap: 1rem;
 }
 
+.container-button-agregar {
+    display: flex;
+    align-items: center;
+    gap:.2rem;
+}
+
 .articulo-botones button{
     cursor: pointer;
-    width: 150px;
+    width: 140px;
     height: 32px;
     font-size: 14px;
     display: flex;
@@ -76,4 +82,15 @@
 
 .articulo-botones a:active{
     scale: 1;
+}
+
+
+.boton-agregado-carrito{
+    background-color: green !important;
+    border: 1px solid green !important;
+    color: white !important;
+}
+
+.boton-agregado-carrito:hover{
+    
 }

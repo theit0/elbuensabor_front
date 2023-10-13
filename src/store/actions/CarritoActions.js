@@ -21,6 +21,24 @@ export const set_articulo_carrito = createAction('set_articulo_carrito', (articu
     } 
 })
 
+export const eliminar_articulo_unidad_carrito = createAction('eliminar_articulo_unidad_carrito', (articuloAEliminar) => {
+    const carritoActual = JSON.parse(localStorage.getItem('carrito')) || [];
+    
+    const indiceArticuloAEliminar = carritoActual.findIndex(articulo => articulo.id === articuloAEliminar.id);
+
+    if (indiceArticuloAEliminar !== -1) {
+        carritoActual.splice(indiceArticuloAEliminar, 1);
+        localStorage.setItem('carrito', JSON.stringify(carritoActual));
+    }
+
+    return {
+        payload: {
+            carrito: [...carritoActual],
+            articuloAEliminar
+        }
+    };
+});
+
 
 
 

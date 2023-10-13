@@ -1,5 +1,5 @@
 import { createReducer } from "@reduxjs/toolkit"
-import { eliminar_articulo_carrito, get_articulo_carrito, set_articulo_carrito } from "../actions/CarritoActions.js"
+import { eliminar_articulo_carrito, eliminar_articulo_unidad_carrito, get_articulo_carrito, set_articulo_carrito } from "../actions/CarritoActions.js"
 
 const estadoInicial = {
     carrito: []
@@ -26,6 +26,12 @@ const CarritoReducers = createReducer(estadoInicial,
                         return {
                           ...state,
                           carrito: state.carrito.filter((articulo) => articulo.id !== articuloId),
+                        };
+                    })
+                    .addCase(eliminar_articulo_unidad_carrito, (state, action) => {
+                        return {
+                          ...state,
+                          carrito: action.payload.carrito,
                         };
                     })
 )

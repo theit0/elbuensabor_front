@@ -1,35 +1,29 @@
-import { eliminar_articulo_carrito } from '../store/actions/CarritoActions'
+import ArticuloCarrito from '../components/ArticuloCarrito'
 import '../styles/Carrito.css'
 
-import { useDispatch, useSelector } from 'react-redux'
+import { useSelector } from 'react-redux'
 
 const Carrito = () => {
 
-    const articulosAgregados = useSelector(store=>store.carritoReducers.carrito)
+    const articulosAgregados = useSelector(store => store.carritoReducers.carrito)
 
-    console.log(articulosAgregados)
-
-    const dispatch = useDispatch()
+    console.log([new Set(articulosAgregados.map(article => article.id))])
 
 
-    const eliminarDelCarrito = (id) => {
-      dispatch(eliminar_articulo_carrito(id))
-    }
+    const contarVecesAgregado = (arreglo, value) => {
+        return arreglo.reduce((contador, articulo) => contador + (articulo.id === value ? 1 : 0), 0);
+    };
 
     return (
-      <div className='carrito-container'>
-        {
-          articulosAgregados.map(articulo=> {
-            return <div>
-                      <h3>{articulo.denominacion}</h3>
-                      <p>{articulo.descripcion}</p>
-                      <span>{articulo.precioVenta}</span>
-                      <button onClick={()=>eliminarDelCarrito(articulo.id)}>Eliminar</button>
-                  </div>
-          })    
-        }
-          
-      </div>
+        <div className='carrito-container'>
+            {
+                [...new Set(articulosAgregados.map(articulo => articulo.id))].map(articuloID => {
+                    const article = articulosAgregados.find(a => a.id === articuloID);
+                    const cntAgr = contarVecesAgregado(articulosAgregados, articuloID);
+                    return <ArticuloCarrito key={articuloID} articulo={article} cntAgr={cntAgr} />;
+                })
+            }
+        </div>
     )
 }
 

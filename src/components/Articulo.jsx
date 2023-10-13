@@ -12,6 +12,7 @@ const Articulo = ({articulo}) => {
     const [seClickeo,setSeClickeo] = useState('')
     const [seClickeoBool,setseClickeoBool] = useState(false)
 
+    
 
     const manejarAñadirCarrito = ()=>{
         dispatch(set_articulo_carrito(articulo))
@@ -20,7 +21,7 @@ const Articulo = ({articulo}) => {
         setTimeout(() => {
             setSeClickeo("")
             setseClickeoBool(false)
-        }, 1000);
+        }, 500);
     }
 
     
@@ -52,10 +53,9 @@ const Articulo = ({articulo}) => {
                                 Añadir al carrito
                             </div>
                             :
-                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-circle-check" width="21" height="21" viewBox="0 0 24 24" stroke-width="2" stroke="white" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-check" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="white" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                 <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
-                                <path d="M9 12l2 2l4 -4"></path>
+                                <path d="M5 12l5 5l10 -10"></path>
                             </svg>
                         }
                         

@@ -24,7 +24,7 @@
 
 @media (max-width:1360px) {
     .art-manuf-detalle-container{
-        padding: 2rem 1rem;
+        padding: 1rem 1rem;
     }
     .articulo-detalle-container{
         flex-direction: column;

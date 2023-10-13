@@ -3,12 +3,14 @@ import '../styles/ArticuloManufacturadoDetalle.css'
 import { useDispatch, useSelector } from 'react-redux';
 import { get_articulo } from '../store/actions/ArticuloActions';
 import { useEffect, useState } from 'react';
+import { set_articulo_carrito } from '../store/actions/CarritoActions';
 
 
 const ArticuloManufacturadoDetalle = () => {
   const { id } = useParams();
   const articulo = useSelector(store => store.articuloReducers.articulo);
   const dispatch = useDispatch();
+
 
   useEffect(() => {
       window.scrollTo(130, 130);
@@ -20,6 +22,16 @@ const ArticuloManufacturadoDetalle = () => {
   if(unidades<0) {
     setUnidades(0);
   }
+
+  const agregarAlCarrito = () => {
+    let i=0;
+    for(i=0; i < unidades; i++) {
+      dispatch(set_articulo_carrito(articulo))
+    }
+  }
+
+  console.log(unidades)
+
 
 
   return (
@@ -75,7 +87,7 @@ const ArticuloManufacturadoDetalle = () => {
                           </div>
                           <p>¡Quedan <b className='unidades'>10 unidades</b> disponibles!</p>
                         </div>
-                        <button className='añadir-carrito-boton'>
+                        <button className='añadir-carrito-boton' onClick={()=>agregarAlCarrito()}>
                           <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-shopping-cart-plus" width="16" height="16" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                               <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                               <path d="M4 19a2 2 0 1 0 4 0a2 2 0 0 0 -4 0"></path>

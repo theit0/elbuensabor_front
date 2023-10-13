@@ -12,27 +12,35 @@ const Carrito = () => {
         return arreglo.reduce((contador, articulo) => contador + (articulo.id === value ? 1 : 0), 0);
     };
 
+    let subtotal = 0;
+
+    articulosAgregados.forEach((articulo)=>{
+        subtotal = subtotal+ articulo.precioVenta;
+    })
+
+    const envio = 500;
+
 
     return (
         <div className='carrito-container'>
-            <Link className='seguir-viendo-boton' to="/">
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-narrow-left" width="16" height="16" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                    <path d="M5 12l14 0"></path>
-                    <path d="M5 12l4 4"></path>
-                    <path d="M5 12l4 -4"></path>
-                </svg>
-                Seguir viendo productos
-            </Link>
-
+            
             
             <div className='container-principal-carrito'>
                 {
                     <div className='articulos-carrito'>
-                        <article className='articulos-carrito'>
+                        <Link className='seguir-viendo-boton' to="/">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-narrow-left" width="16" height="16" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <path d="M5 12l14 0"></path>
+                                <path d="M5 12l4 4"></path>
+                                <path d="M5 12l4 -4"></path>
+                            </svg>
+                            Seguir viendo productos
+                        </Link>
+                        <article className='carrito-titulo-container'>
                             <div className='titulo-carrito'>
-                            <h1>Tu carrito</h1>
-                            <span>{articulosAgregados.length} productos en el carrito</span>
+                                <h1>Tu carrito</h1>
+                                <span>{articulosAgregados.length} productos en el carrito</span>
                             </div>
                         </article>
 
@@ -43,6 +51,7 @@ const Carrito = () => {
                                 return <ArticuloCarrito key={articuloID} articulo={article} cntAgr={cntAgr} />;
                             })
                         }
+                        
                         {
                             articulosAgregados.length===0 &&
                             <p className='mensaje-vacio'>
@@ -58,11 +67,7 @@ const Carrito = () => {
                     <div className='resumen-carrito'>
                         <div className='resumen-info'>
                             <span>Subtotal</span>
-                            <span>
-                                {
-                                    
-                                }
-                            </span>
+                            <span>${subtotal}</span>
                         </div>
                         <div className='resumen-info'>
                             <span>Impuestos</span>
@@ -70,11 +75,11 @@ const Carrito = () => {
                         </div>
                         <div className='resumen-info'>
                             <span>Envío</span>
-                            <span>$500</span>
+                            <span>${envio}</span>
                         </div>
                         <div className='resumen-info'>
                             <span>Total</span>
-                            <span>$9500</span>
+                            <span>${subtotal+envio}</span>
                         </div>
                         <article>
                             <button>

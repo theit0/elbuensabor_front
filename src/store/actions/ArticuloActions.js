@@ -19,7 +19,7 @@ export const get_articulo = createAsyncThunk('get_articulo',async (id)=>{
     
     try {
         const response = await axios.get(`http://localhost:8080/api/v1/articulosManufacturados/${id}`)
-        console.log(response.data)
+
         return {
             articulo: response.data
         }

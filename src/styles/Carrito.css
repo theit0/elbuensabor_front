@@ -1,4 +1,6 @@
 .carrito-container {
+    
+    padding-top: 2rem;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -18,10 +20,9 @@
 
 .mensaje-vacio{
     text-align: center;
-    color: #a90409;
+    color: white;
     max-width: 450px;
-    background-color: #ea7c80;
-    border: 1px solid #a90409;
+    background-color: #E5030B;
     padding: 1rem;
     margin-top: 1rem;
 }

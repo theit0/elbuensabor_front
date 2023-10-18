@@ -37,6 +37,7 @@ header nav a {
 .navlinks {
     display: flex;
     flex-direction: row;
+    
 }
 
 nav{
@@ -45,7 +46,7 @@ nav{
 
 .navlinks-dropped {
     background-color: white;
-    padding: 2rem;
+    padding: 1rem;
     border: 1px solid #E6E6E6;
     position: absolute;
     top: 60px;
@@ -64,16 +65,16 @@ nav{
     display: none;
     transition: .2s ease;
 }
+
 .dropdown-button:hover{
     scale: 1.2;
     cursor: pointer;
     background-color:#EAECEC;
 }
+
 .dropdown-button:active{
     scale: 1;
 }
-
-
 
 @media (max-width:700px) {
     .dropdown-button{

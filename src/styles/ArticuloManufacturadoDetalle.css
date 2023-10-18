@@ -115,6 +115,8 @@
 }
 
 
+
+
 .cantidad-unidades-container{
     display: flex;
     align-items: center;
@@ -140,6 +142,12 @@
     transition: .1s ease;
 }
 
+.añadir-carrito-boton-subdiv{
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+}
+
 .añadir-carrito-boton:hover{
     background-color: black;
     color: white;
@@ -147,6 +155,16 @@
 
 .añadir-carrito-boton:active{
     scale: 0.95;
+}
+
+
+.boton-agregado-carrito-detalle{
+    width: 170px;
+    height: 50px;
+    background-color: green !important;
+    border: 1px solid green !important;
+    color: white !important;
+    
 }
 
 
@@ -192,4 +210,13 @@
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
+}
+
+
+.mensaje-validez{
+    padding: 1rem;
+    background-color: #e7868a;
+    max-width: 350px;
+    color: #b90208;
+    border: 1px solid #b90208;
 }

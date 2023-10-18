@@ -4,15 +4,11 @@ import Articulo from '../components/Articulo'
 
 const SeccionArticuloRubro = ({rubroDenominacion}) => {
 
-  
-
-
     const articulos = useSelector(store=>store.articuloReducers.articulos)
                     
     const articulos_rubro = articulos.filter(articulo => {
         return articulo.rubroArticulo.denominacion === rubroDenominacion
     });
-
 
     return (
         <section >
@@ -31,6 +27,7 @@ const SeccionArticuloRubro = ({rubroDenominacion}) => {
                     </div>
                 </div>
             }
+            
         </section>
     )
 }

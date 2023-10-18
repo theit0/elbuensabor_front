@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom'
 import ArticuloCarrito from '../components/ArticuloCarrito'
 import '../styles/Carrito.css'
-
 import { useSelector } from 'react-redux'
 
 const Carrito = () => {
@@ -55,7 +54,7 @@ const Carrito = () => {
                         {
                             articulosAgregados.length===0 &&
                             <p className='mensaje-vacio'>
-                                Actualmente, tu carrito de compras está vacío. Vuelve al inicio para agregar productos.Si necesitas asistencia, estamos aquí para ayudarte en todo momento.
+                                Actualmente, tu carrito de compras está vacío. Vuelve al inicio para agregar productos. Si necesitas asistencia, estamos aquí para ayudarte en todo momento.
                             </p>
                         }
                     </div>
